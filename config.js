@@ -9,6 +9,7 @@ const dev = {
     },
     hosting: {
         port: process.env.APP_PORT,
+        host: process.env.APP_HOST
 
     }
 
@@ -23,6 +24,7 @@ const local = {
     },
     hosting: {
         port: process.env.APP_PORT,
+        host: process.env.APP_HOST
     }
 }
 
@@ -35,6 +37,7 @@ const prod = {
 
     hosting: {
         port: process.env.APP_PORT,
+        host: process.env.APP_HOST
 
     }
 }
@@ -44,5 +47,13 @@ const config = {
     prod,
     local
 }
+
+
+/* 
+
+The code above is a simple way to set up a configuration object that will be used to set up the
+environment for the application. 
+
+*/
 
 module.exports = config[env];
